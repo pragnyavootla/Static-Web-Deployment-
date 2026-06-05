@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Comfortaa", sans-serif;
+    background:linear-gradient(
+        135deg,
+        #F8FFF8,
+        #DFF6E3,
+        #B8E0D2
+    );
+    min-height:100vh;
+    padding:40px;
+    color:#355E3B;
+    transition:0.4s ease;
+}
+
+.container{
+    max-width:750px;
+    margin:auto;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(12px);
+    padding:30px;
+    border:4px solid #7BC47F;
+    border-radius:28px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#4E944F;
+}
+
+h1::after{
+    content:"";
+    display:block;
+    width:240px;
+    height:4px;
+    margin:12px auto 0;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #7BC47F,
+        transparent
+    );
+    border-radius:20px;
+}
+
+.watering-reminder{
+    background:#F0FFF4;
+    border:2px dashed #7BC47F;
+    border-radius:16px;
+    padding:15px;
+    margin-bottom:25px;
+}
+
+.plant-section{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.plant-pot{
+    font-size:3rem;
+}
+
+#plantStage{
+    font-size:1.4rem;
+    font-weight:600;
+    margin-top:10px;
+}
+
+#progressPercent{
+    margin-top:8px;
+    font-size:1rem;
+    font-weight:500;
+}
+
+.progress-container{
+    width:100%;
+    height:14px;
+    background:#DFF6E3;
+    border-radius:999px;
+    overflow:hidden;
+    margin-bottom:25px;
+}
+
+#progressBar{
+    width:0%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #7BC47F,
+        #4E944F
+    );
+    transition:width .4s ease;
+}
+
+.input-section{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+#taskInput,
+#dueDate{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:#F8FFF8;
+    box-shadow:inset 0 0 0 2px #B8E0D2;
+    font-family:inherit;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    padding:12px 18px;
+    border-radius:12px;
+    background:#7BC47F;
+    color:white;
+    font-family:inherit;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+    background:#F8FFF8;
+    border:2px dashed #A8D5A2;
+    border-radius:18px;
+    padding:15px;
+    margin-bottom:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.task-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.task-details{
+    display:flex;
+    flex-direction:column;
+}
+
+.completed{
+    text-decoration:line-through;
+    opacity:0.6;
+}
+
+.overdue{
+    border-color:#F87171;
+    background:#FFF1F2;
+}
+
+.delete-btn{
+    background:#F87171;
+}
+
+.delete-btn:hover{
+    background:#EF4444;
+}
+
+.milestones{
+    margin-top:25px;
+    padding:20px;
+    background:#F0FFF4;
+    border-radius:16px;
+    border:2px dashed #7BC47F;
+}
+
+.milestones h3{
+    margin-bottom:10px;
+}
+
+.milestones p{
+    margin:6px 0;
+}
+
+.theme-toggle{
+    position:fixed;
+    top:20px;
+    right:20px;
+}
+
+.dark{
+    background:linear-gradient(
+        135deg,
+        #050816,
+        #0F172A,
+        #111827
+    );
+    color:#E5E7EB;
+}
+
+.dark .container{
+    background:rgba(15,23,42,0.92);
+    border-color:#4ADE80;
+}
+
+.dark h1{
+    color:#86EFAC;
+}
+
+.dark li{
+    background:#1E293B;
+    border-color:#4ADE80;
+}
+
+.dark .watering-reminder,
+.dark .milestones{
+    background:#172554;
+    border-color:#4ADE80;
+}
+
+.dark #taskInput,
+.dark #dueDate{
+    background:#1E293B;
+    color:white;
+    box-shadow:inset 0 0 0 2px #4ADE80;
+}
+
+.dark .progress-container{
+    background:#1E293B;
+}
+
+.dark .overdue{
+    border-color:#F87171;
+    background:#FFF1F2;
+}
